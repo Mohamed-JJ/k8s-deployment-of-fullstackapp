@@ -1,0 +1,6 @@
+./front-end/node_modules
+./front-end/package-lock.json
+./default/package-lock.json
+./default/node_modules
+./user/package-lock.json
+./user/node_modules
