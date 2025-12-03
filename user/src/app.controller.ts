@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { AppService, user } from './app.service';
 
 
 
@@ -7,8 +7,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('user')
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('user/all')
+  getHello(): user[] {
+    return this.appService.getUsers();
+  }
+
+  @Get('user/count')
+  getUsersCount(){
+    return this.appService.getUserCount();
   }
 }
